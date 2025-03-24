@@ -1,0 +1,24 @@
+Fraunhofer Italia Custom License
+
+Copyright (c) 2024 Fraunhofer Italia
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the following conditions:
+
+1. Source Code Redistributions:
+Redistributions of the source code must retain the above copyright notice, this list of conditions, and the following disclaimer.
+
+2. Binary Redistributions:
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Endorsement Restrictions:
+Neither the names "Fraunhofer Italia" nor the names of its developers may be used to endorse or promote products derived from this Software without specific prior written permission.
+
+4. Attribution Preservation:
+Redistributions of the Software in any form must not remove or alter the attribution to Fraunhofer Italia and its developers within the source code or any associated documentation, including, but not limited to, inline docstrings.
+
+5. Internal Use Exception for Fraunhofer Italia and Project Contributors:
+Notwithstanding the above, this Software and its documentation may be used, copied, modified, and distributed within the organization of Fraunhofer Italia and by individuals working on internal projects. This permission is granted exclusively for internal use and cannot be extended to any external third party or used in any external projects without explicit written permission.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+DEVELOPER: Elias Niederwieser, Julius Emig, Dietmar Siegele
