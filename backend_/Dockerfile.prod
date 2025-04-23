@@ -1,0 +1,34 @@
+# Dockerfile for creating a production-grade Docker image for a FastAPI backend application.
+# Use a minimal and secure base image
+
+FROM python:3.11-slim as base
+
+LABEL maintainer="elias.niederwieser@fraunhofer.it"
+LABEL version="1.0.0"
+LABEL description="Production Docker Image for FastAPI Backend"
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    POETRY_VERSION=1.5.1
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir "poetry==1.5.1"
+
+WORKDIR /app
+
+COPY . /app
+
+RUN poetry config virtualenvs.create false && \
+poetry install
+
+COPY . /app
+
+RUN useradd -m nonrootuser && chown -R nonrootuser:nonrootuser /app
+USER nonrootuser
+
+EXPOSE 8000

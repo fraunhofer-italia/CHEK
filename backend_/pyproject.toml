@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "fastapi-microservice"
+version = "0.1.0"
+description = ""
+authors = ["Elias Niederwieser <elias.niederwieser@fraunhofer.it>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.104.1"}
+
+
+python-dotenv = "^1.0.0"
+reltools = "^1.0.0"
+pillow = "^10.1.0"
+drawsvg = "^2.3.0"
+rich = "^13.7.0"
+psycopg2-binary = "^2.9.9"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+
+
+slowapi = "^0.1.8"
+pydantic-settings = "^2.1.0"
+alembic = "^1.13.1"
+langchain = "^0.2.9"
+openai = "^1.35.14"
+tiktoken = "^0.7.0"
+langchain-community = "^0.2.7"
+langchain-openai = "^0.1.17"
+faiss-cpu = "^1.8.0.post1"
+jinja2 = "^3.1.4"
+itsdangerous = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

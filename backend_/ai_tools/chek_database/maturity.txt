@@ -1,0 +1,147 @@
+City regulatory information
+This event indicates regulatory information available at authority's office to collect in person (Level 0), regulatory information available in PDF and can be sent via email (Level 1), regulatory information available on the official webpage in PDF format and can be downloaded (Level 2), regulatory information accessible online, 2D map available, and the information associated with the zoning can be downloaded (Level 3), 3D city map accessible and the regulation information available to download in XML or JSON (Level 4), 3D city map accessible and the rulesets can be imported from the plot directly to the design software (Level 5).
+
+City planning information
+This event indicates regulatory information available at authority's office to collect in person (Level 0), city plans available in PDF and can be sent via email (Level 1), city plans available on the official webpage in PDF format and can be downloaded (Level 2), regulatory information accessible online, 2D map available, and the information associated with the zoning can be downloaded (Level 3), 3D city map accessible and available to download in XML or JSON (Level 4), 3D city map accessible and available to link directly to the design software (Level 5).
+
+Building regulatory information
+This event indicates regulatory information available at authority's office to collect in person (Level 0), email request for PDF of building regulatory documents (Level 1), access of webpage and download of PDF building regulatory documents (Level 2), access of online database and download regulatory documents (Level 3), access of online centralized database and download regulatory information in IDS (Level 4), access of online centralized database and link directly into design software to import IDS (Level 5).
+
+Pre-application consulting request received
+This event indicates an in-person meeting at authority's office (Level 0), pre-consultations with email exchanges (Level 1), online request of pre-consultation by uploading documents at web portal (Level 2), pre-consultation of model uploaded at a cloud-based platform (Level 3), automatic analysis of model-checking with rulesets from authority (Level 4), automatic analysis of model-checking at authority's dedicated platform (Level 5).
+
+Provide pre-application consulting
+This task involves an in-person meeting at authority's office (Level 0), pre-consultations with email exchanges (Level 1), online request of pre-consultation by uploading documents at web portal (Level 2), pre-consultation of model uploaded at a cloud-based platform (Level 3), automatic analysis of model-checking with rulesets from authority (Level 4), automatic analysis of model-checking at authority's dedicated platform (Level 5).
+
+Application received
+This event indicates an in-person or mail submission of physical documents (Level 0), email submission with attachments (Level 1), online submission at web portal with filling of forms and update of documents (Level 2), submission of models, form filling, and digital documents with automated verification of documents (Level 3), submission of models with automatic extraction data for filing forms (Level 4), submission of models with automatic extraction and validation of data (Level 5).
+
+Initiate Application Review
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), implementation of automated compliance checking for BIM models (Level 4), real-time cloud-based monitoring for compliance of BIM models (Level 5).
+
+Issue application number
+This task involves manually assigned application number (Level 0), digital issuance and emailed application number (Level 1), digital issuance with online access (Level 2), automated number assignment platform notification (Level 3), automated number assignment with dashboard (Level 4), instantaneous digital numbering with cloud integration (Level 5).
+
+Check administrative requirements
+This task involves manual review of physical administrative documents (Level 0), utilization of computerized administrative checklists (Level 1), basic digital tracking system for administrative verification (Level 2), automated tracking of administrative documents (Level 3), real-time cloud-based administrative document tracking and verification (Level 4), AI-driven automated administrative document compliance and verification system (Level 5).
+
+Geolocate the plot
+This task involves locating plot on a physical map (Level 0), manual location of plot on 2D map (Level 1), geolocating plot on map with GIS data (Level 2), manual geolocation of BIM model (Level 3), automatic geolocation of BIM model (Level 4), real-time cloud-based geolocation of models (Level 5).
+
+Check documentation completeness
+This task involves manual check of physical documents for completion (Level 0), document checklist on computer (Level 1), use of basic digital document tracking (Level 2), automated tracking of document submission (Level 3), real-time cloud-based document tracking and verification (Level 4), AI-driven automated document compliance and verification system (Level 5).
+
+Return application for revision
+This task involves hand-delivered or mailed notice for revisions (Level 0), email notification with revision notes (Level 1), system-generated email with revision notes (Level 2), automated notification system with revision notes (Level 3), immediate digital messaging with revision guidance (Level 4), real-time interactive revision platform (Level 5).
+
+Accept application
+This task involves the acceptance of an application by the building authority. It can be done through physical submission of documents (Level 1), digital submission via email (Level 2), online portal submission (Level 3), automated system verification (Level 4), real-time tracking with notifications (Level 5), and AI-driven acceptance (Level 6).
+
+Notify acceptance
+This task involves physical ledger communication log (Level 0), communication logs in digital files (Level 1), database entry for communications (Level 2), CRM system tracking communication (Level 3), unified communication logging platform (Level 4), integrated communication analytics dashboard (Level 5).
+
+Application Status updated
+This event refers to the updating of the application status. It includes manual updates in logs (Level 1), spreadsheet updates (Level 2), digital dashboard updates (Level 3), real-time software updates (Level 4), integrated project management updates (Level 5), and immediate cloud synchronization (Level 6).
+
+Assign responsible technician for the process
+This task involves paper documents handover (Level 0), use of internal email system (Level 1), centralized document management system (Level 2), automated distribution to relevant departments (Level 3), permission modifications for assigned technicians in shared data environment (Level 4), AI-enabled document routing with instant status integration (Level 5).
+
+Assign internal evaluators
+This task involves physical inter-office mail to distribute documents (Level 0), use of internal email system (Level 1), centralized document management system (Level 2), automated distribution to relevant departments (Level 3), permission modifications for assigned technicians in shared data environment (Level 4), AI-enabled document routing with instant status integration (Level 5).
+
+Require external evaluation
+This task involves mailing documents to external agencies (Level 0), emailing digital documents (Level 1), update documents at online submission portals for external agencies access (Level 2), integrated external consultation systems (Level 3), real-time collaboration platforms (Level 4), blockchain-verified inter-agency platform (Level 5).
+
+Receive external evaluation report
+This task involves in-person decision-making and sign-off on external agency approvals (Level 0), email communication for external agency decision (Level 1), system-generated email with external agency decision details (Level 2), automated notification system for external agency decision (Level 3), automatic status approval in cloud-based platform with notification (Level 4), automated approval through live collaboration system (Level 5).
+
+Require changes
+This task involves physical ledger communication log (Level 0), communication logs in digital files (Level 1), database entry for communications (Level 2), CRM system tracking communication (Level 3), unified communication logging platform (Level 4), integrated communication analytics dashboard (Level 5).
+
+Receive updated project
+This task involves receiving an updated project. It can be done through physical resubmission of documents (Level 1), email resubmission of CAD/PDFs (Level 2), online portal resubmission (Level 3), model and document verification (Level 4), automated data extraction (Level 5), and automated extraction and validation (Level 6).
+
+Changes accepted
+This event indicates the acceptance of changes made to the project. It includes manual acceptance (Level 1), email confirmation (Level 2), digital tracking (Level 3), automated notification (Level 4), real-time acceptance in the cloud (Level 5), and AI-driven validation (Level 6).
+
+No project changes required
+This event signifies that no changes are required for the project. It involves manual confirmation (Level 1), email notification (Level 2), digital tracking (Level 3), automated confirmation (Level 4), real-time cloud-based confirmation (Level 5), and AI-driven validation (Level 6).
+
+Check compliance with urban regulation
+This task involves reviewing physical zoning maps (Level 0), digital maps with CAD software (Level 1), interactive GIS systems for zoning (Level 2), compliance checking software implementation for GIS data (Level 3), implementation of automated compliance checking for GIS data (Level 4), real-time cloud-based monitoring for compliance of GIS data (Level 5).
+
+Check compliance with building regulation
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), implementation of automated compliance checking for BIM models (Level 4), real-time cloud-based monitoring for compliance of BIM models (Level 5).
+
+Check structural project compliance
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), implementation of automated compliance checking for BIM models (Level 4), real-time cloud-based monitoring for compliance of BIM models (Level 5).
+
+Check compliance with fire and safety regulation
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), implementation of automated compliance checking for BIM models (Level 4), real-time cloud-based monitoring for compliance of BIM models (Level 5).
+
+Require changes
+This task involves requesting changes to the project. It can be done through manual request (Level 1), email notification (Level 2), digital tracking (Level 3), automated notification (Level 4), real-time cloud request (Level 5), and AI-driven guidance (Level 6).
+
+Receive updated project
+This task involves physical document resubmission (Level 0), email resubmission of CAD/PDFs (Level 1), online portal resubmission (Level 2), model and digital document resubmission with automated verification (Level 3), automated data extraction from models (Level 4), automated data extraction and validation (Level 5).
+
+Check compliance with energy efficiency standards
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), building energy simulation (Level 4), energy simulation integrated with the city model energy information (Level 5).
+
+Check compliance with natural disaster regulation
+This task involves manual verification of printed documents using a checklist (Level 0), manual verification of CAD and PDF documents using a checklist (Level 1), manual verification of BIM models using a checklist (Level 2), compliance checking software implementation for BIM models (Level 3), building natural disaster simulation (Level 4), natural disaster simulation integrated with the city model information (Level 5).
+
+Require changes
+This task involves hand-delivered or mailed revision requests (Level 0), email notifications (Level 1), system-generated emails with feedback (Level 2), automated feedback messaging system (Level 3), AI-based notification system with action items (Level 4), immediate digital communication with AI guidance (Level 5).
+
+Approve compliance checks
+This task involves manual signature on printed document (Level 0), digital scanned document with signature and stamp (Level 1), digital signatures and seal on electronic document (Level 2), e-approval system with digital seals (Level 3), smart contract execution for approvals/denials through digital platforms (Level 4), immediate digital distribution of decision and blockchain recording in an integrated ecosystem (Level 5).
+
+All compliance checks approved
+This event indicates that all compliance checks have been approved. It includes manual approval (Level 1), email confirmation (Level 2), digital tracking (Level 3), automated approval (Level 4), real-time cloud compliance (Level 5), and AI-driven monitoring (Level 6).
+
+Public notification
+This event indicates the posting of physical notices in local newspapers and on-site (Level 0), sending out mailers to local residents (Level 1), publishing on local authority’s website (Level 2), using social media for wider notification (Level 3), automated notification systems across multiple digital platforms (Level 4), AI-driven targeted community engagement platforms (Level 5).
+
+Receive public feedback
+This task involves receiving written letters and feedback forms (Level 0), collecting feedback via email (Level 1), using online survey tools for feedback collection (Level 2), automated feedback collection systems (Level 3), advanced analytics for feedback analysis (Level 4), AI semantic analysis of public sentiment (Level 5).
+
+Evaluate public feedback
+This task involves deliberation meetings to consider feedback (Level 0), internal review of feedback documents (Level 1), collaborative digital platforms for decision-making (Level 2), use of decision-support software (Level 3), AI-driven predictive impact analysis of feedback (Level 4), machine learning for optimization of decision outcomes (Level 5).
+
+Share public feedback
+This task involves manual signature on printed document (Level 0), digital scanned document with signature and stamp (Level 1), digital signatures and seal on electronic document (Level 2), e-approval system with digital seals (Level 3), smart contract execution for approvals/denials through digital platforms (Level 4), immediate digital distribution of decision and blockchain recording in an integrated ecosystem (Level 5).
+
+Approval notification sent
+This event indicates a mailed letter of decision (Level 0), email notification (Level 1), system-generated email with decision (Level 2), automated email and SMS notification (Level 3), push notifications through digital platforms (Level 4), AI-powered communication system with follow-up actions in an integrated ecosystem (Level 5).
+
+Changes accepted
+This event indicates a mailed letter (Level 0), email notification with digital attachment (Level 1), email notification and in a dedicated platform download of the notice (Level 2), automated email and SMS notification (Level 3), push notification through digital platforms (Level 4), real-time alerts on applicant’s digital dashboard in an integrated ecosystem (Level 5).
+
+Building permit approved
+This event indicates a mailed letter (Level 0), email notification with digital attachment (Level 1), email notification and in dedicated platform download of the notice (Level 2), automated email and SMS notification (Level 3), push notification through digital platforms (Level 4), real-time alerts on applicant’s digital dashboard in an integrated ecosystem (Level 5).
+
+Building permit denied
+This event indicates a mailed letter (Level 0), email notification with digital attachment (Level 1), email notification and in dedicated platform download of the notice (Level 2), automated email and SMS notification (Level 3), push notification through digital platforms (Level 4), real-time alerts on applicant’s digital dashboard in an integrated ecosystem (Level 5).
+
+Final Assessment
+This task involves the final assessment of the project. It includes manual review (Level 1), digital compilation (Level 2), assessment software (Level 3), centralized review dashboard (Level 4), automated platform (Level 5), and AI-supported evaluation (Level 6).
+
+Receive final documents
+This task involves receiving the final documents. It can be done through physical reception (Level 1), email receipt (Level 2), online portal reception (Level 3), automated tracking (Level 4), real-time cloud reception (Level 5), and AI-driven verification (Level 6).
+
+Permit Document Preparation
+This task involves printed and manually signed permit document (Level 0), scanned signature and stamp on digital document (Level 1), digital template filling and PDF generation (Level 2), automated document creation (Level 3), AI-powered document customization and generation (Level 4), smart system for instant digital permit issuance (Level 5).
+
+Update Building Permit Database
+This task involves manual ledger entry of decision (Level 0), digital entry in spreadsheet (Level 1), database update with new permit status (Level 2), cloud-based permit management system (Level 3), real-time update through digital platforms (Level 4), update in blockchain database for immutable record-keeping in an integrated ecosystem (Level 5).
+
+Issue building permit
+This task involves manual signing, printed, and handover of the permit document (Level 0), email with digital attachment of scanned document with signature and stamp (Level 1), email notification and in dedicated platform to download permit with electronic signature and seal (Level 2), e-permit issuance with digital credentials (Level 3), secured e-permit with smart contracts (Level 4), immediate digital distribution and blockchain recording of e-permit in an integrated ecosystem (Level 5).
+
+End
+This event signifies the end of the process. It involves manual closure (Level 1), digital confirmation (Level 2), automated completion (Level 3), real-time monitoring (Level 4), integrated system closure (Level 5), and AI-driven completion (Level 6).
+
+
+
+

@@ -1,0 +1,288 @@
+/* Font-family imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url("./fonts/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: MyriadPro;
+  font-weight: bold;
+  src: url("./fonts/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: MyriadPro;
+  font-weight: light;
+  src: url("./fonts/myriad-pro-cufonfonts/MyriadPro-Light.otf") format("opentype");
+}
+
+/* semantic color variables for this project */
+:root {
+  font-size: 16px; /* Sets the base font size to 16px */
+
+  /* colors */
+  --day-blue-100: #ebedfc;
+  --day-blue-200: #d2d8f9;
+  --day-blue-300: #a6b0f2;
+  --day-blue-400: #7989ec;
+  --day-blue-500: #4d62e5;
+  --day-blue-600: #3045c9;
+  --day-blue-700: #243497;
+  --day-blue-800: #182364;
+  --day-blue-900: #0c1132;
+  --electric-green-100: #f3fbf7;
+  --electric-green-600: #4ac97e;
+  --electric-green-900: #122b1d;
+  --glass-modal: #1a1d21f5;
+  --glass-stroke: #ffffff14;
+  --happy-orange-100: #fff2e9;
+  --happy-orange-600: #e26f20;
+  --happy-orange-900: #391c08;
+  --heisenberg-blue-100: #f1fbfe;
+  --heisenberg-blue-200: #e0f6fd;
+  --heisenberg-blue-300: #c0edfb;
+  --heisenberg-blue-400: #a1e4f9;
+  --heisenberg-blue-500: #82dbf7;
+  --heisenberg-blue-600: #65beda;
+  --heisenberg-blue-700: #4c8fa4;
+  --heisenberg-blue-800: #335f6d;
+  --heisenberg-blue-900: #193037;
+  --noble-black-0: #ffffff;
+  --noble-black-100: #e8e9e9;
+  --noble-black-200: #cdcecf;
+  --noble-black-300: #9b9c9e;
+  --noble-black-400: #686b6e;
+  --noble-black-50: #f5f5f5;
+  --noble-black-500: #363a3d;
+  --noble-black-600: #1a1d21;
+  --noble-black-700: #131619;
+  --noble-black-800: #0d0f10;
+  --noble-black-900: #060708;
+  --purple-blue-100: #f0e8fd;
+  --purple-blue-200: #deccfb;
+  --purple-blue-300: #bd9af8;
+  --purple-blue-400: #9c67f4;
+  --purple-blue-500: #7c35f1;
+  --purple-blue-600: #5f18d4;
+  --purple-blue-700: #47129f;
+  --purple-blue-800: #300c6a;
+  --purple-blue-900: #180635;
+  --red-power-100: #fbecec;
+  --red-power-600: #d0302f;
+  --red-power-900: #2f0f0e;
+  --stem-green-100: #f7fdf4;
+  --stem-green-200: #edfbe6;
+  --stem-green-300: #dbf7cd;
+  --stem-green-400: #c8f4b4;
+  --stem-green-500: #b6f09c;
+  --stem-green-600: #9ad37f;
+  --stem-green-700: #739f5f;
+  --stem-green-800: #4d6a3f;
+  --stem-green-900: #263520;
+  --sunglow-100: #fffaea;
+  --sunglow-200: #fff3d1;
+  --sunglow-300: #ffe8a3;
+  --sunglow-400: #ffdc75;
+  --sunglow-500: #ffd147;
+  --sunglow-600: #e2b42b;
+  --sunglow-700: #aa8720;
+  --sunglow-800: #715a15;
+  --sunglow-900: #392d0b;
+
+  /* Color styles */
+  --neutral--25: #F5F6F7;
+  --neutral--50: #EEEFF0;
+  --neutral--100: #DCDEE2;
+  --neutral--200: #C9CDD2;
+  --neutral--300: #A8ADB6;
+  --neutral--400: #8F95A1;
+  --neutral--500: #6F7786;
+  --neutral--600: #525C6C;
+  --neutral--700: #3E4859;
+  --neutral--800: #2B3444;
+  --neutral--900: #171D29;
+  --neutral--950: #0B0D12;
+  --neutral--0: #FFFFFF;
+  --brand--25: #F9FDFE;
+  --brand--50: #F6FCFE;
+  --brand--100: #F1FBFE;
+  --brand--200: #E0F6FD;
+  --brand--300: #C0EDFB;
+  --brand--400: #A1E4F9;
+  --brand--500: #82DBF7;
+  --brand--600: #65BEDA;
+  --brand--700: #4C8FA4;
+  --brand--800: #335F6D;
+  --brand--900: #193037;
+  --success--25: #E2FCEB;
+  --success--50: #C9FBDA;
+  --success--100: #82F5AA;
+  --success--200: #48E780;
+  --success--300: #21C65A;
+  --success--400: #16AB4A;
+  --success--500: #0D8939;
+  --success--600: #096A2B;
+  --success--700: #075322;
+  --success--800: #053C18;
+  --success--900: #04230F;
+  --error--25: #FDF3F4;
+  --error--50: #FDEBED;
+  --error--100: #FAD4D8;
+  --error--200: #F7BEC4;
+  --error--300: #F2919B;
+  --error--400: #ED6B79;
+  --error--500: #E4263B;
+  --error--600: #B51526;
+  --error--700: #90101E;
+  --error--800: #6B0C17;
+  --error--900: #3F070D;
+  --warning--25: #FEF5EC;
+  --warning--50: #FDECD9;
+  --warning--100: #FBD8B3;
+  --warning--200: #F9C287;
+  --warning--300: #F59632;
+  --warning--400: #E67700;
+  --warning--500: #B85E00;
+  --warning--600: #8E4900;
+  --warning--700: #703900;
+  --warning--800: #512900;
+  --warning--900: #2F1800;
+  --gradient---radial---bottom: #FFFFFF;
+  --_-logo---black: #000000;
+  --_-logo---light: #38D7ED;
+  --_-logo---accent: #3535B0;
+  --_-logo---accent-light: #5D5EFC;
+  --alpha-white--10: #FFFFFF;
+  --alpha-white--20: #FFFFFF;
+  --alpha-white--30: #FFFFFF;
+  --alpha-white--40: #FFFFFF;
+  --alpha-white--50: #FFFFFF;
+  --alpha-white--60: #FFFFFF;
+  --alpha-white--70: #FFFFFF;
+  --alpha-white--80: #FFFFFF;
+  --alpha-white--90: #FFFFFF;
+  --alpha-white--100: #FFFFFF;
+
+  /* Text-size styles */
+  /* base size: paragraph--m---regular (16px) */
+  --heading-2-x-l---regular: 4.5rem;
+  --heading-2-x-l---medium: 4.5rem;
+  --heading-2-x-l---semibold: 4.5rem;
+  --heading-2-x-l---bold: 4.5rem;
+  --heading--x-l---regular: 3.75rem;
+  --heading--x-l---medium: 3.75rem;
+  --heading--x-l---semibold: 3.75rem;
+  --heading--x-l---bold: 3.75rem;
+  --heading--l---regular: 3rem;
+  --heading--l---medium: 3rem;
+  --heading--l---semibold: 3rem;
+  --heading--l---bold: 3rem;
+  --heading--m---regular: 2.25rem;
+  --heading--m---medium: 2.25rem;
+  --heading--m---semibold: 2.25rem;
+  --heading--m---bold: 2.25rem;
+  --heading--s---regular: 1.88rem;
+  --heading--s---medium: 1.88rem;
+  --heading--s---semibold: 1.88rem;
+  --heading--s---bold: 1.88rem;
+  --heading--x-s---regular: 1.5rem;
+  --heading--x-s---medium: 1.5rem;
+  --heading--x-s---semibold: 1.5rem;
+  --heading--x-s---bold: 1.5rem;
+  --heading--x-s---semibold-underline: 1.5rem;
+  --paragraph--x-l---regular: 1.25rem;
+  --paragraph--x-l---medium: 1.25rem;
+  --paragraph--x-l---semibold: 1.25rem;
+  --paragraph--x-l---bold: 1.25rem;
+  --paragraph--x-l---regular-underline: 1.25rem;
+  --paragraph--x-l---medium-underline: 1.25rem;
+  --paragraph--l---regular: 1.12rem;
+  --paragraph--l---medium: 1.12rem;
+  --paragraph--l---semibold: 1.12rem;
+  --paragraph--l---bold: 1.12rem;
+  --paragraph--l---regular-underline: 1.12rem;
+  --paragraph--l---medium-underline: 1.12rem;
+  --paragraph--m---regular: 1rem;
+  --paragraph--m---medium: 1rem;
+  --paragraph--m---semibold: 1rem;
+  --paragraph--m---bold: 1rem;
+  --paragraph--m---regular-underline: 1rem;
+  --paragraph--s---regular: 0.88rem;
+  --paragraph--s---medium: 0.88rem;
+  --paragraph--s---semibold: 0.88rem;
+  --paragraph--s---bold: 0.88rem;
+  --paragraph--x-s---regular: 0.75rem;
+  --paragraph--x-s---medium: 0.75rem;
+  --paragraph--x-s---semibold: 0.75rem;
+  --paragraph--x-s---bold: 0.75rem;
+  --button---l: 1rem;
+  --button---m: 1rem;
+  --button---s: 0.88rem;
+  --input---l: 1rem;
+  --input---m: 0.88rem;
+  --input---s: 0.75rem;
+
+  /* Effect styles */
+  --shadow---x-s:  0px 1px 2px rgba(24, 30, 39, 0.08);
+  --shadow---s:  0px 1px 2px rgba(24, 30, 39, 0.06), 0px 1px 3px rgba(24, 30, 39, 0.1);
+  --shadow---m:  0px 2px 4px rgba(24, 30, 39, 0.06), 0px 4px 6px rgba(24, 30, 39, 0.1);
+  --shadow---l:  0px 4px 6px rgba(24, 30, 39, 0.05), 0px 10px 15px rgba(24, 30, 39, 0.1);
+  --shadow---x-l:  0px 10px 10px rgba(24, 30, 39, 0.04), 0px 20px 25px rgba(24, 30, 39, 0.1);
+  --shadow--2-x-l:  0px 25px 50px rgba(24, 30, 39, 0.25);
+  --blur---x-s-shadows: ;
+  --blur---x-s-blur: blur(4px);
+  --blur---s-shadows: ;
+  --blur---s-blur: blur(8px);
+  --blur---m-shadows: ;
+  --blur---m-blur: blur(12px);
+  --blur---l-shadows: ;
+  --blur---l-blur: blur(16px);
+  --blur---x-l-shadows: ;
+  --blur---x-l-blur: blur(24px);
+  --blur--2-x-l-shadows: ;
+  --blur--2-x-l-blur: blur(40px);
+  --blur--3-x-l-shadows: ;
+  --blur--3-x-l-blur: blur(64px);
+  --blur--6-x-l-shadows: ;
+  --blur--6-x-l-blur: blur(256px);
+  --backdrop--blur---x-s: ;
+  --backdrop--blur---s: ;
+  --backdrop--blur---m: ;
+  --backdrop--blur---l: ;
+  --backdrop--blur---x-l: ;
+  --backdrop--blur--2-x-l: ;
+  --backdrop--blur--3-x-l: ;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 1rem;
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral--100);
+  border-radius: 1rem;
+  border: 0.3rem solid transparent;
+  background-clip: content-box;
+}
+
+@media (max-width: 600px) {
+  :root{
+    font-size: 12px;
+  }
+}

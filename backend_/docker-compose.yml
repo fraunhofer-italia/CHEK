@@ -1,0 +1,95 @@
+services:
+  # PostgreSQL Database Service
+  db:
+    container_name: CHEK-DB-CONTAINER
+    image: postgres:latest
+    ports:
+      - "5414:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+    labels:
+      com.example.service: "chek_database"  
+# API Service
+  api:
+    container_name: CHEK-BACKEND-CONTAINER
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "7782:8000"
+    volumes:
+      - .:/app
+      - /app/data/
+    env_file:
+      - .env
+    depends_on:
+      - db
+    profiles:
+      - dev
+    command: >
+      sh -c "
+      mkdir -p /app/alembic/versions &&
+      alembic upgrade head &&
+      python /app/init_db.py &&
+      uvicorn main_dev:app --host 0.0.0.0 --port 8000 --reload
+      "
+    restart: always
+    labels:
+      com.example.service: "api-dev"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+# API PRODUCTION Service
+  api-prod:
+    container_name: chek_API
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "9980:8000"
+    volumes:
+      - .:/app
+      - /app/data/
+    env_file:
+      - .env
+    depends_on:
+      - db
+    profiles:
+      - prod
+    command: >
+      sh -c "
+      mkdir -p /app/alembic/versions &&
+      alembic upgrade head &&
+      python /app/init_db.py &&
+      uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4 --loop uvloop
+      "
+    restart: always
+    labels:
+      com.example.service: "chek_api"
+ # # PGADMIN
+  pgadmin:
+    container_name: chek_PGADMIN
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    ports:
+      - "5051:80"
+    depends_on:
+      - db
+    labels:
+      com.example.service: "chek_pgadmin"
+
+networks:
+  default:
+    external: true
+    name: chek_network

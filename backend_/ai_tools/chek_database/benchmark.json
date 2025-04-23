@@ -1,0 +1,308 @@
+{
+    "Key Maturity Areas": [
+      {
+        "kma": "Understanding of the process and mapping of steps",
+        "check level": 4,
+        "dependencies": "",
+        "actions": "Have process map",
+        "check tools": "CHEK Virtual Assistant"
+      },
+      {
+        "kma": "Stakeholders are aware of process steps and required information they must provide",
+        "check level": 4,
+        "dependencies": "Have process map",
+        "actions": "Implement tracking platform",
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Benchmarks and key performance indicators",
+        "check level": 4,
+        "dependencies": [
+          "Have process map",
+          "Define KPIs"
+        ],
+        "actions": [
+          "Define KPIs",
+          "Define measurement for KPIs"
+        ],
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Standardised process",
+        "check level": 4,
+        "dependencies": "Implement tracking platform",
+        "actions": "Create guidelines",
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Data templates, use of common data formats, and documentation requirements",
+        "check level": 5,
+        "dependencies": [
+          "Have process map",
+          "Implement BIMserver.centre"
+        ],
+        "actions": [
+          "Implement BIMserver.centre",
+          "Connect BIMserver.centre",
+          "Implement IFC and GIS use"
+        ],
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Timelines and response time",
+        "check level": 3,
+        "dependencies": "Connect stakeholders",
+        "actions": "Communicate timelines",
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Accessibility of stakeholders",
+        "check level": 4,
+        "dependencies": [
+          "Define measurement for KPIs",
+          "Create guidelines",
+          "Implement IFC and GIS use"
+        ],
+        "actions": "Implement data sharing",
+        "check tools": "BIM Server Centre"
+      },
+      {
+        "kma": "Transparency",
+        "check level": 4,
+        "dependencies": "Implement data sharing",
+        "actions": "Connect stakeholders",
+        "check tools": "BIM Server Centre"
+      },
+      {
+        "kma": "Internal staff",
+        "check level": 2,
+        "dependencies": "",
+        "actions": "Make online trainings",
+        "check tools": "CHEK training package"
+      },
+      {
+        "kma": "Higher management",
+        "check level": 3,
+        "dependencies": "",
+        "actions": "Create strategic plan",
+        "check tools": "Municipality's domain"
+      },
+      {
+        "kma": "Infrastructure",
+        "check level": 3,
+        "dependencies": "Have process map",
+        "actions": "Define current situation of hardware infrastructure",
+        "check tools": "Municipality's domain"
+      },
+      {
+        "kma": "Legislative system",
+        "check level": 2,
+        "dependencies": "",
+        "actions": "Understand the legislative system",
+        "check tools": "CHEK Regulation Tool"
+      },
+      {
+        "kma": "Strategic objectives for data ecosystem implementation",
+        "check level": 4,
+        "dependencies": "Create strategic plan",
+        "actions": "Share strategic vision",
+        "check tools": "Municipality's domain"
+      },
+      {
+        "kma": "Dedicated personnel",
+        "check level": 2,
+        "dependencies": "Share strategic vision",
+        "actions": "Create BIM/GIS groups",
+        "check tools": "Municipality's domain"
+      },
+      {
+        "kma": "Training, preparation and support",
+        "check level": 3,
+        "dependencies": "Create BIM/GIS groups",
+        "actions": "Provide training",
+        "check tools": "CHEK training package"
+      },
+      {
+        "kma": "Overall knowledge of technicians",
+        "check level": 3,
+        "dependencies": "Provide training",
+        "actions": "Provide certifications",
+        "check tools": "CHEK training package"
+      },
+      {
+        "kma": "Stakeholders' knowledge",
+        "check level": 2,
+        "dependencies": "Provide training",
+        "actions": "Train stakeholders",
+        "check tools": "CHEK training package"
+      },
+      {
+        "kma": "Data management environment and network platform",
+        "check level": 4,
+        "dependencies": "Integrate IFC signature",
+        "actions": [
+          "Use BIMserver.centre for BIM and GIS",
+          "Assign users"
+        ],
+        "check tools": "BIM Server Centre"
+      },
+      {
+        "kma": "Data storage/ repository",
+        "check level": 4,
+        "dependencies": "Use BIMserver.centre for BIM and GIS",
+        "actions": "Connect storage repository",
+        "check tools": "BIM Server Centre"
+      },
+      {
+        "kma": "Submission system and identification (e.g. electronic signature)",
+        "check level": 3,
+        "dependencies": "Implement BIMserver.centre",
+        "actions": "Integrate IFC signature",
+        "check tools": [
+          "BIM Server Centre",
+          "IFC Signature"
+        ]
+      },
+      {
+        "kma": "Communication system",
+        "check level": 3,
+        "dependencies": [
+          "Use BIMserver.centre for BIM and GIS",
+          "Integrate IFC signature"
+        ],
+        "actions": "Connect web portal",
+        "check tools": "BIM Server Centre"
+      },
+      {
+        "kma": "Verification of procedural data",
+        "check level": 3,
+        "dependencies": "Use BIMserver.centre for BIM and GIS",
+        "actions": "Identify procedural data",
+        "check tools": "CHEK IDS"
+      },
+      {
+        "kma": "Data inspection and visualisation",
+        "check level": 4,
+        "dependencies": "Use BIMserver.centre for BIM and GIS",
+        "actions": "Implement visualisation tool",
+        "check tools": [
+          "BIM Server Centre",
+          "VC Map",
+          "VC Map CHEK plugin"
+        ]
+      },
+      {
+        "kma": "Data validation for building data",
+        "check level": 4,
+        "dependencies": [
+          "Implement visualisation tool",
+          "Use CHEK IDS"
+        ],
+        "actions": "Implement validation tool for BIM",
+        "check tools": [
+          "BIM Server Centre Validation",
+          "Verify 3D"
+        ]
+      },
+      {
+        "kma": "Data validation for spatial data",
+        "check level": 4,
+        "dependencies": [
+          "Implement visualisation tool",
+          "Use CHEK GIS standards"
+        ],
+        "actions": "Implement validation tool for GIS",
+        "check tools": "CHEK GIS standard"
+      },
+      {
+        "kma": "Content analyser and Regulations' Checking tool",
+        "check level": 4,
+        "dependencies": [
+          "Implement validation tool for BIM",
+          "Implement validation tool for GIS",
+          "Use CHEK rules repository"
+        ],
+        "actions": "Implement checking tool",
+        "check tools": "CYPE Urban"
+      },
+      {
+        "kma": "Data format interoperability",
+        "check level": 5,
+        "dependencies": "Implement checking tool",
+        "actions": "Connect checking software to BIMserver.centre",
+        "check tools": "CHEK IDS"
+      },
+      {
+        "kma": "Building data to geospatial data (e.g. BIM to GIS)",
+        "check level": 4,
+        "dependencies": "Connect checking software to BIMserver.centre",
+        "actions": "Implement BIM to GIS",
+        "check tools": [
+          "BIM to CityGML",
+          "Plugin CityJSON to Revit"
+        ]
+      },
+      {
+        "kma": "Geospatial data to building data (e.g. GIS to BIM)",
+        "check level": 4,
+        "dependencies": "Connect checking software to BIMserver.centre",
+        "actions": "Implement GIS to BIM",
+        "check tools": "CityGML to IFC"
+      },
+      {
+        "kma": "Data standards and guidelines",
+        "check level": 4,
+        "dependencies": [
+          "Implement IFC and GIS use",
+          "Share strategic vision"
+        ],
+        "actions": "Implement CHEK IDS",
+        "check tools": "CHEK IDS"
+      },
+      {
+        "kma": "Data quality control",
+        "check level": 4,
+        "dependencies": [
+          "Use CHEK IDS",
+          "Use CHEK GIS standards"
+        ],
+        "actions": "Create quality control plan",
+        "check tools": "CHEK Guidelines and support material"
+      },
+      {
+        "kma": "Building/intervention design data",
+        "check level": 4,
+        "dependencies": "Use CHEK rules repository",
+        "actions": "Use CHEK IDS",
+        "check tools": "CHEK IDS"
+      },
+      {
+        "kma": "City context data",
+        "check level": 4,
+        "dependencies": "Use CHEK rules repository",
+        "actions": "Use CHEK GIS standards",
+        "check tools": "CHEK IDS"
+      },
+      {
+        "kma": "Regulations formats",
+        "check level": 2,
+        "dependencies": [
+          "Understand the legislative system",
+          "Implement CHEK IDS"
+        ],
+        "actions": [
+          "Assess rules to translate",
+          "Translate rules"
+        ],
+        "check tools": "CHEK Regulation Tool"
+      },
+      {
+        "kma": "Regulations accessibility",
+        "check level": 2,
+        "dependencies": "Translate rules",
+        "actions": "Use CHEK rules repository",
+        "check tools": "CHEK Guidelines and support material"
+      }
+    ]
+  }
+  

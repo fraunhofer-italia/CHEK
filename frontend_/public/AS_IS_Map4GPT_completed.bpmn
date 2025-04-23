@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+  xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+  xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:maturity="http://maturity"
+  xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0"
+  xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0"
+  id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn"
+  exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="16.1.0">
+  <collaboration id="Collaboration_0ns2ztv">
+    <participant id="Participant_1d7bae3" name="APPLICANT" processRef="Process_1" />
+    <participant id="Participant_10416fu" name="BUILDING AUTHORITY" processRef="Process_0a4rzpj" />
+    <participant id="Participant_1n47d9v" name="PUBLIC" processRef="Process_0ynjb0m" />
+    <participant id="Participant_1x75f9d" name="THIRD PARTIES" processRef="Process_1si7yt5" />
+    <messageFlow id="Flow_1nv5mws" sourceRef="Event_1d26swa" targetRef="Event_0f62ar1" />
+    <messageFlow id="Flow_04xth0i" sourceRef="Activity_01vke2b" targetRef="Activity_07ovf00" />
+    <messageFlow id="Flow_06f5spv" sourceRef="Event_0erh0ds" targetRef="Activity_01vke2b" />
+    <messageFlow id="Flow_1u2td7x" sourceRef="Activity_1eoi8zf" targetRef="Activity_1l2wzfp" />
+    <messageFlow id="Flow_1nufeln" sourceRef="Event_0l2c0er" targetRef="Activity_1ip5bbs" />
+    <messageFlow id="Flow_1y7ozjo" sourceRef="Event_1uvvmdj" targetRef="Activity_1t9un0r" />
+    <messageFlow id="Flow_0d7k8py" sourceRef="Activity_1idljpm" targetRef="Activity_0llzwz8" />
+    <messageFlow id="Flow_1xkakd5" sourceRef="Activity_0gmck6m" targetRef="Event_14zo0wl" />
+    <messageFlow id="Flow_04ax9tz" sourceRef="Activity_11watu1" targetRef="Activity_0vjppnk" />
+    <messageFlow id="Flow_0b3ng1p" sourceRef="Event_0c9qgbh" targetRef="Activity_084qsme" />
+    <messageFlow id="Flow_1qg9i8o" sourceRef="Event_1c0nxo6" targetRef="Activity_1l2wzfp" />
+    <messageFlow id="Flow_02axgrq" sourceRef="Event_1gcnr6a" targetRef="Event_1dlal3d" />
+    <messageFlow id="Flow_03pd5fm" sourceRef="Activity_1t9un0r" targetRef="Activity_0y1jv3p" />
+    <messageFlow id="Flow_0zgiqlp" sourceRef="Event_1sw0sd1" targetRef="Event_0dvnw20" />
+  </collaboration>
+  <process id="Process_1" isExecutable="false">
+    <laneSet id="LaneSet_0jowqzu" />
+    <task id="Activity_03nqiax" maturity:maturity_level="2"
+      maturity:user_description="The building designs are made on Revit"
+      name="Initial Design Drafting">
+      <incoming>Flow_0kw9s8p</incoming>
+      <outgoing>Flow_02n6rn7</outgoing>
+    </task>
+    <task id="Activity_02b1xjc" maturity:maturity_level="2"
+      maturity:user_description="There is a website that we can upload all the documents, building drawings, and the model of the project. Through this website we can make requests for the municipality and they will answer our questions about the project."
+      name="Consultation with Experts">
+      <incoming>Flow_02n6rn7</incoming>
+      <outgoing>Flow_0h2xpv1</outgoing>
+    </task>
+    <task id="Activity_12p1n4y" maturity:maturity_level="2"
+      maturity:user_description="The building designs are made on Revit. From the model we create the drawings that are used on the process"
+      name="Prepare Application Documents">
+      <incoming>Flow_1n6ogyp</incoming>
+      <outgoing>Flow_1wwlbpy</outgoing>
+    </task>
+    <task id="Activity_0xl4x8q" maturity:maturity_level="3"
+      maturity:user_description="There is a governement website where the taxes and fees have to be paid. It usually takes one to two days to upload the status of payment, but is done trhough the website."
+      name="Fiscal obligations fulfilled (tax payment)">
+      <incoming>Flow_1wwlbpy</incoming>
+      <outgoing>Flow_0spkil1</outgoing>
+    </task>
+    <task id="Activity_0sjmztu" maturity:maturity_level="2"
+      maturity:user_description="I use a website with the map of the city that has regulation relate to each plot"
+      name="Gather City Planning Information (planning)">
+      <incoming>Flow_018iz5p</incoming>
+      <outgoing>Flow_16vimjb</outgoing>
+    </task>
+    <task id="Activity_0xzdkqq" maturity:maturity_level="2"
+      maturity:user_description="I use a website with the map of the city that has regulation relate to each plot"
+      name="Gather Building regulatory information">
+      <incoming>Flow_16vimjb</incoming>
+      <outgoing>Flow_1xdrjs4</outgoing>
+    </task>
+    <task id="Activity_02rtfjo" maturity:maturity_level="2"
+      maturity:user_description="I use a website with the map of the city that has regulation relate to each plot"
+      name="Gather Existing Building and regulatory information">
+      <incoming>Flow_1xdrjs4</incoming>
+      <outgoing>Flow_0kw9s8p</outgoing>
+    </task>
+    <task id="Activity_0gmck6m" maturity:maturity_level="3"
+      maturity:user_description="After uploading all the documents, there is a payment done directly on the website."
+      name="Pay Application Fees">
+      <incoming>Flow_0f2izjc</incoming>
+    </task>
+    <task id="Activity_11watu1" maturity:maturity_level="2"
+      maturity:user_description="The applicant is able to download new documents within the same process in the website."
+      name="Collect Additional Information">
+      <incoming>Flow_168jndl</incoming>
+    </task>
+    <task id="Activity_07ovf00" maturity:maturity_level="2"
+      maturity:user_description="The applicant receives the feedback from the external agency and has to make the modifications on the BIM model"
+      name="Incorporate External Feedback">
+      <outgoing>Flow_1un6qg7</outgoing>
+    </task>
+    <task id="Activity_1eoi8zf" maturity:maturity_level="2"
+      maturity:user_description="The designer has to make the changes on the design based on the conditions, they have to modify the revit model and upload on the webste again"
+      name="Update Project with Conditions">
+      <incoming>Flow_1un6qg7</incoming>
+    </task>
+    <task id="Activity_02uj2kc" maturity:maturity_level="2"
+      maturity:user_description="The applicant receives the feedback from the municipality and has to make the modifications on the BIM model"
+      name="Applicant Revisions">
+      <incoming>Flow_1e2uabw</incoming>
+      <outgoing>Flow_1s3mz9i</outgoing>
+    </task>
+    <task id="Activity_1ip5bbs" maturity:maturity_level="2"
+      maturity:user_description="The designer has to make the changes on the design based on the conditions, they have to modify the revit model and upload on the webste again"
+      name="Update of Project Post-Review">
+      <outgoing>Flow_1e2uabw</outgoing>
+    </task>
+    <intermediateThrowEvent id="Event_0eu72vf" maturity:maturity_level="2"
+      maturity:user_description="There is a website that we can upload all the documents, building drawings, and the model of the project. We have to make a login and open a new request for the project."
+      name="Submit Application">
+      <incoming>Flow_0spkil1</incoming>
+      <outgoing>Flow_0f2izjc</outgoing>
+    </intermediateThrowEvent>
+    <intermediateCatchEvent id="Event_0dvnw20" maturity:maturity_level="2"
+      maturity:user_description="There is a website that we can upload all the documents, building drawings, and the model of the project. Trhough this website we can make requests for the municipality and they will answer our questions about the project."
+      name="Pre-application consultations">
+      <incoming>Flow_0h2xpv1</incoming>
+      <outgoing>Flow_1n6ogyp</outgoing>
+      <messageEventDefinition id="MessageEventDefinition_0r1aruq" />
+    </intermediateCatchEvent>
+    <intermediateCatchEvent id="Event_0f62ar1" maturity:maturity_level="2"
+      maturity:user_description="The technician updates the statuss of the process and the applicant receives na email with the update."
+      name="Return Application for Revision">
+      <outgoing>Flow_168jndl</outgoing>
+      <messageEventDefinition id="MessageEventDefinition_1j7wz66" />
+    </intermediateCatchEvent>
+    <intermediateThrowEvent id="Event_1c0nxo6" maturity:maturity_level="2"
+      maturity:user_description="The applicant resubmits the model and documents on the website"
+      name="Resubmission of Revised Project">
+      <incoming>Flow_1s3mz9i</incoming>
+    </intermediateThrowEvent>
+    <sequenceFlow id="Flow_1ilum4y" sourceRef="Event_1rifxrt" targetRef="Activity_1gqkizg" />
+    <sequenceFlow id="Flow_018iz5p" sourceRef="Activity_1gqkizg" targetRef="Activity_0sjmztu" />
+    <sequenceFlow id="Flow_0kw9s8p" sourceRef="Activity_02rtfjo" targetRef="Activity_03nqiax" />
+    <sequenceFlow id="Flow_02n6rn7" sourceRef="Activity_03nqiax" targetRef="Activity_02b1xjc" />
+    <sequenceFlow id="Flow_0h2xpv1" sourceRef="Activity_02b1xjc" targetRef="Event_0dvnw20" />
+    <sequenceFlow id="Flow_1n6ogyp" sourceRef="Event_0dvnw20" targetRef="Activity_12p1n4y" />
+    <sequenceFlow id="Flow_1wwlbpy" sourceRef="Activity_12p1n4y" targetRef="Activity_0xl4x8q" />
+    <sequenceFlow id="Flow_0spkil1" sourceRef="Activity_0xl4x8q" targetRef="Event_0eu72vf" />
+    <sequenceFlow id="Flow_12ygi9x" sourceRef="Event_1dlal3d" targetRef="Activity_0fmesdu" />
+    <sequenceFlow id="Flow_19r4qzp" sourceRef="Activity_0fmesdu" targetRef="Activity_1idljpm" />
+    <sequenceFlow id="Flow_16vimjb" sourceRef="Activity_0sjmztu" targetRef="Activity_0xzdkqq" />
+    <sequenceFlow id="Flow_1xdrjs4" sourceRef="Activity_0xzdkqq" targetRef="Activity_02rtfjo" />
+    <sequenceFlow id="Flow_0f2izjc" sourceRef="Event_0eu72vf" targetRef="Activity_0gmck6m" />
+    <sequenceFlow id="Flow_168jndl" sourceRef="Event_0f62ar1" targetRef="Activity_11watu1" />
+    <sequenceFlow id="Flow_1un6qg7" sourceRef="Activity_07ovf00" targetRef="Activity_1eoi8zf" />
+    <sequenceFlow id="Flow_1e2uabw" sourceRef="Activity_1ip5bbs" targetRef="Activity_02uj2kc" />
+    <sequenceFlow id="Flow_1s3mz9i" sourceRef="Activity_02uj2kc" targetRef="Event_1c0nxo6" />
+    <task id="Activity_0fmesdu" maturity:maturity_level="2"
+      maturity:user_description="The final documents are uploaded in the municipality&#39;s website"
+      name="Fulfillment of Pre-conditions">
+      <incoming>Flow_12ygi9x</incoming>
+      <outgoing>Flow_19r4qzp</outgoing>
+    </task>
+    <task id="Activity_1idljpm" maturity:maturity_level="3"
+      maturity:user_description="The taxes and fees are paid in a government website dedicated for payments. The receipt payment is send direct to the municipality&#39;s website"
+      name="Payment of Fees (Fulfil fiscal obligations)">
+      <incoming>Flow_19r4qzp</incoming>
+    </task>
+    <intermediateCatchEvent id="Event_1dlal3d" maturity:maturity_level="2"
+      maturity:user_description="The applicant receives an email notifying the project was approved and is directed to a link where they have to make the payments and upload the final documents"
+      name="Notification of Approval">
+      <outgoing>Flow_12ygi9x</outgoing>
+      <messageEventDefinition id="MessageEventDefinition_19mjyu1" />
+    </intermediateCatchEvent>
+    <task id="Activity_1gqkizg" maturity:maturity_level="2"
+      maturity:user_description="I use a website with the map of the city that has regulation relate to each plot"
+      name="Gather City Regulatory Information (regulation)">
+      <incoming>Flow_1ilum4y</incoming>
+      <outgoing>Flow_018iz5p</outgoing>
+    </task>
+    <startEvent id="Event_1rifxrt">
+      <outgoing>Flow_1ilum4y</outgoing>
+    </startEvent>
+  </process>
+  <process id="Process_0a4rzpj">
+    <intermediateThrowEvent id="Event_0c9qgbh" maturity:maturity_level="2"
+      maturity:user_description="There is a part of the portal external agencies can access and dowload the documents referent to their part of analysis on the project"
+      name="External Agencies Consultation">
+      <incoming>Flow_10hsyb5</incoming>
+      <messageEventDefinition id="MessageEventDefinition_1slia7z" />
+    </intermediateThrowEvent>
+    <task id="Activity_01vke2b" maturity:maturity_level="2"
+      maturity:user_description="The external angency responsible for the project has to fill a document about the project and give their recommendation on it. They upload the pdf on the portal."
+      name="Collect Agency Feedback" />
+    <task id="Activity_1l2wzfp" maturity:maturity_level="1"
+      maturity:user_description="There is a map of the zoning area in CAD inside the BIM model. The information about the zoning should be clearly marked in the model so the technitian is able to check it."
+      name="Zoning Review">
+      <outgoing>Flow_04o1sbz</outgoing>
+    </task>
+    <task id="Activity_0kotjl9" maturity:maturity_level="2"
+      maturity:user_description="The models are checked by the technitian opening the file and going through the building design following a checklist of codes that should be fulfiled."
+      name="Structural Review">
+      <incoming>Flow_042nxmp</incoming>
+      <outgoing>Flow_1z0bw5o</outgoing>
+    </task>
+    <task id="Activity_1pkqjwk" maturity:maturity_level="2"
+      maturity:user_description="The models are checked by the technitian opening the file and going through the building design following a checklist of codes that should be fulfiled."
+      name="Fire and Safety Review">
+      <incoming>Flow_1z0bw5o</incoming>
+      <outgoing>Flow_1kgzuta</outgoing>
+    </task>
+    <task id="Activity_1lkh4hv" maturity:maturity_level="2"
+      maturity:user_description="The models are checked by the technitian opening the file and going through the building design following a checklist of codes that should be fulfiled."
+      name="Building Code Review">
+      <incoming>Flow_04o1sbz</incoming>
+      <outgoing>Flow_042nxmp</outgoing>
+    </task>
+    <task id="Activity_1nmiprp" maturity:maturity_level="2"
+      maturity:user_description="The models are checked by the technitian opening the file and going through the building design following a checklist of codes that should be fulfiled."
+      name="Energy efficiency review">
+      <incoming>Flow_1bn05j4</incoming>
+      <outgoing>Flow_0diqbhx</outgoing>
+    </task>
+    <task id="Activity_0if8j0b" maturity:maturity_level="2"
+      maturity:user_description="The models are checked by the technitian opening the file and going through the building design following a checklist of codes that should be fulfiled."
+      name="Natural disaster compliance review">
+      <incoming>Flow_0diqbhx</incoming>
+      <outgoing>Flow_0aeyhdk</outgoing>
+    </task>
+    <task id="Activity_1sc1hfv" maturity:maturity_level="2"
+      maturity:user_description="The technician receives the package of files with all the documents on the project and has to manually check if they are according to the required."
+      name="Initial Application Review">
+      <incoming>Flow_0d2a2wx</incoming>
+      <outgoing>Flow_0j9qbfl</outgoing>
+    </task>
+    <task id="Activity_009csz7" maturity:maturity_level="3"
+      maturity:user_description="Some information is filled on the website and this information is checked automatically. The other documents have to be manually checked by the technitian. They follow a checkilist that is used in each type of project."
+      name="Administrative Check">
+      <incoming>Flow_0tn6xzc</incoming>
+      <outgoing>Flow_0uxini8</outgoing>
+    </task>
+    <task id="Activity_083sk93" maturity:maturity_level="2"
+      maturity:user_description="Some information is filled on the website and this information is checked automatically. The other documents have to be manually checked by the technitian. They follow a checkilist that is used in each type of project."
+      name="Documentation completeness review">
+      <incoming>Flow_13y0ocx</incoming>
+      <outgoing>Flow_06a95cy</outgoing>
+    </task>
+    <task id="Activity_0vjppnk" maturity:maturity_level="1"
+      maturity:user_description="The communication is done via the website of the municipality. It generates emails notifying that there is a update. The user has to download the files from there"
+      name="Log Communication">
+      <outgoing>Flow_13ia2ro</outgoing>
+    </task>
+    <task id="Activity_08j44sl" maturity:maturity_level="1"
+      maturity:user_description="There is a responsible for all the process and they assign each process for each technician. They will give permission on the platform to that technician access the process folder."
+      name="Internal Distribution">
+      <incoming>Flow_02no3pp</incoming>
+      <outgoing>Flow_02hz8h6</outgoing>
+    </task>
+    <task id="Activity_004oz6e" maturity:maturity_level="3"
+      maturity:user_description="Usually BIM models have the point with the coordinates, but the designer has to insert it manually."
+      name="Define the geographic location of plot">
+      <incoming>Flow_0uxini8</incoming>
+      <outgoing>Flow_13y0ocx</outgoing>
+    </task>
+    <task id="Activity_1gziu87" maturity:maturity_level="1"
+      maturity:user_description="There is a responsible for all the process and they assign each process for each technician. They will give permission on the platform to that technician access the process folder."
+      name="Assign responsible technician for the process">
+      <incoming>Flow_0ckcq7p</incoming>
+      <outgoing>Flow_02no3pp</outgoing>
+    </task>
+    <exclusiveGateway id="Gateway_1ndlhnu" maturity:maturity_level="2"
+      maturity:user_description="Once the project is approved, the technician on the municipality updates the statuss on the website and the applicant receives an email notifying for that update"
+      name="Decision on Reviews">
+      <incoming>Flow_1kgzuta</incoming>
+      <outgoing>Flow_0d7esa6</outgoing>
+      <outgoing>Flow_1bn05j4</outgoing>
+    </exclusiveGateway>
+    <intermediateThrowEvent id="Event_1vby0a8" maturity:maturity_level="1"
+      maturity:user_description="The report of the technitian with the modifications needed is uploaded to the website. This document is in pdf and has a written signature from the responsible for the project"
+      name="Approval of Reviews">
+      <incoming>Flow_0aeyhdk</incoming>
+      <outgoing>Flow_0e47ezk</outgoing>
+    </intermediateThrowEvent>
+    <intermediateThrowEvent id="Event_1uvvmdj" maturity:maturity_level="2"
+      maturity:user_description="The project is published in the municipality&#39;s website with open access from any citizen"
+      name="Notification of Public Consultation">
+      <incoming>Flow_0e47ezk</incoming>
+      <messageEventDefinition id="MessageEventDefinition_0zcmrok" />
+    </intermediateThrowEvent>
+    <exclusiveGateway id="Gateway_0bffslq" name="Decision gateway">
+      <incoming>Flow_06a95cy</incoming>
+      <outgoing>Flow_071x1ge</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway id="Gateway_0s2cw8t" name="External Agencies Gateway">
+      <incoming>Flow_02hz8h6</incoming>
+      <outgoing>Flow_10hsyb5</outgoing>
+    </exclusiveGateway>
+    <intermediateThrowEvent id="Event_0u8wazg" maturity:maturity_level="3"
+      maturity:user_description="When the project is created by the applicant, there is a automatic generation of the number on the website."
+      name="Issue Application Number">
+      <incoming>Flow_0j9qbfl</incoming>
+      <outgoing>Flow_0tn6xzc</outgoing>
+    </intermediateThrowEvent>
+    <intermediateThrowEvent id="Event_03zn3tq" maturity:maturity_level="2"
+      maturity:user_description="The statuss of the process is updated by the technician and the applicant is able to see it."
+      name="Update Application Status">
+      <incoming>Flow_13ia2ro</incoming>
+      <outgoing>Flow_0ckcq7p</outgoing>
+    </intermediateThrowEvent>
+    <intermediateCatchEvent id="Event_14zo0wl" maturity:maturity_level="3"
+      maturity:user_description="Once the process is send to the municipality, all the notifications of the process are received on the email of the person registered on the website."
+      name="Acknowledge Receipt">
+      <outgoing>Flow_0d2a2wx</outgoing>
+      <messageEventDefinition id="MessageEventDefinition_0fbzz2k" />
+    </intermediateCatchEvent>
+    <sequenceFlow id="Flow_071x1ge" sourceRef="Gateway_0bffslq" targetRef="Event_1d26swa" />
+    <sequenceFlow id="Flow_10hsyb5" sourceRef="Gateway_0s2cw8t" targetRef="Event_0c9qgbh" />
+    <sequenceFlow id="Flow_0d7esa6" sourceRef="Gateway_1ndlhnu" targetRef="Event_0l2c0er" />
+    <sequenceFlow id="Flow_0ji3duc" sourceRef="Gateway_1jnuhso" targetRef="Event_144gat5" />
+    <sequenceFlow id="Flow_04o1sbz" sourceRef="Activity_1l2wzfp" targetRef="Activity_1lkh4hv" />
+    <sequenceFlow id="Flow_14vx1fs" sourceRef="Activity_0llzwz8" targetRef="Activity_1lz0rd1" />
+    <sequenceFlow id="Flow_1dz8rfk" sourceRef="Activity_1lz0rd1" targetRef="Event_178qrwi" />
+    <sequenceFlow id="Flow_042nxmp" sourceRef="Activity_1lkh4hv" targetRef="Activity_0kotjl9" />
+    <sequenceFlow id="Flow_1z0bw5o" sourceRef="Activity_0kotjl9" targetRef="Activity_1pkqjwk" />
+    <sequenceFlow id="Flow_1kgzuta" sourceRef="Activity_1pkqjwk" targetRef="Gateway_1ndlhnu" />
+    <sequenceFlow id="Flow_1v08q7z" sourceRef="Activity_0y1jv3p" targetRef="Gateway_0o5889u" />
+    <sequenceFlow id="Flow_1pd6t3s" sourceRef="Gateway_0o5889u" targetRef="Activity_0igloxo" />
+    <sequenceFlow id="Flow_016o0z7" sourceRef="Activity_0igloxo" targetRef="Event_1emiyrx" />
+    <sequenceFlow id="Flow_1bn05j4" sourceRef="Gateway_1ndlhnu" targetRef="Activity_1nmiprp" />
+    <sequenceFlow id="Flow_0diqbhx" sourceRef="Activity_1nmiprp" targetRef="Activity_0if8j0b" />
+    <sequenceFlow id="Flow_0aeyhdk" sourceRef="Activity_0if8j0b" targetRef="Event_1vby0a8" />
+    <sequenceFlow id="Flow_0d2a2wx" sourceRef="Event_14zo0wl" targetRef="Activity_1sc1hfv" />
+    <sequenceFlow id="Flow_0j9qbfl" sourceRef="Activity_1sc1hfv" targetRef="Event_0u8wazg" />
+    <sequenceFlow id="Flow_0tn6xzc" sourceRef="Event_0u8wazg" targetRef="Activity_009csz7" />
+    <sequenceFlow id="Flow_0uxini8" sourceRef="Activity_009csz7" targetRef="Activity_004oz6e" />
+    <sequenceFlow id="Flow_13y0ocx" sourceRef="Activity_004oz6e" targetRef="Activity_083sk93" />
+    <sequenceFlow id="Flow_06a95cy" sourceRef="Activity_083sk93" targetRef="Gateway_0bffslq" />
+    <sequenceFlow id="Flow_13ia2ro" sourceRef="Activity_0vjppnk" targetRef="Event_03zn3tq" />
+    <sequenceFlow id="Flow_02no3pp" sourceRef="Activity_1gziu87" targetRef="Activity_08j44sl" />
+    <sequenceFlow id="Flow_02hz8h6" sourceRef="Activity_08j44sl" targetRef="Gateway_0s2cw8t" />
+    <sequenceFlow id="Flow_0ckcq7p" sourceRef="Event_03zn3tq" targetRef="Activity_1gziu87" />
+    <sequenceFlow id="Flow_1x6bb34" sourceRef="Gateway_0o5889u" targetRef="Event_1emiyrx" />
+    <sequenceFlow id="Flow_10b4mrq" sourceRef="Event_1emiyrx" targetRef="Gateway_1jnuhso" />
+    <sequenceFlow id="Flow_1wyj9y0" sourceRef="Gateway_1jnuhso" targetRef="Event_0tfw29s" />
+    <sequenceFlow id="Flow_14227wp" sourceRef="Event_0tfw29s" targetRef="Event_1gcnr6a" />
+    <sequenceFlow id="Flow_0e47ezk" sourceRef="Event_1vby0a8" targetRef="Event_1uvvmdj" />
+    <intermediateThrowEvent id="Event_0l2c0er" maturity:maturity_level="2"
+      maturity:user_description="" name="Notification of Required Revisions">
+      <incoming>Flow_0d7esa6</incoming>
+      <messageEventDefinition id="MessageEventDefinition_19axr0m" />
+    </intermediateThrowEvent>
+    <exclusiveGateway id="Gateway_0o5889u" name="Consideration of Feedback in Decision">
+      <incoming>Flow_1v08q7z</incoming>
+      <outgoing>Flow_1pd6t3s</outgoing>
+      <outgoing>Flow_1x6bb34</outgoing>
+    </exclusiveGateway>
+    <task id="Activity_0igloxo" maturity:maturity_level="1"
+      maturity:user_description="The technitian issues a final repport with the approval or denial of the project. The checklist with all the rules is attached to this report"
+      name="Final Assessment">
+      <incoming>Flow_1pd6t3s</incoming>
+      <outgoing>Flow_016o0z7</outgoing>
+    </task>
+    <task id="Activity_0y1jv3p" maturity:maturity_level="1"
+      maturity:user_description="All the complains are compiled in one single pdf file and attached to the documents of the process"
+      name="Documentation of Public Input">
+      <outgoing>Flow_1v08q7z</outgoing>
+    </task>
+    <endEvent id="Event_144gat5">
+      <incoming>Flow_0ji3duc</incoming>
+      <terminateEventDefinition id="TerminateEventDefinition_0yftcxz" />
+    </endEvent>
+    <task id="Activity_1lz0rd1" maturity:maturity_level="2"
+      maturity:user_description="After the project is approved, the model and all documents of the process are saved on a server archive of the municipality. And the status of the project is changed to approved."
+      name="Update Building Permit Database">
+      <incoming>Flow_14vx1fs</incoming>
+      <outgoing>Flow_1dz8rfk</outgoing>
+    </task>
+    <task id="Activity_0llzwz8" maturity:maturity_level="3"
+      maturity:user_description="Once all the documents and payments are fulfiled, the municipality website allows to compile the documents and create a storage folder of the process"
+      name="Permit Document Preparation">
+      <outgoing>Flow_14vx1fs</outgoing>
+    </task>
+    <exclusiveGateway id="Gateway_1jnuhso" name="Decision Gateway">
+      <incoming>Flow_10b4mrq</incoming>
+      <outgoing>Flow_1wyj9y0</outgoing>
+      <outgoing>Flow_0ji3duc</outgoing>
+    </exclusiveGateway>
+    <intermediateThrowEvent id="Event_1gcnr6a" maturity:maturity_level="2"
+      maturity:user_description="The applicant receives an email notification that the project was approved or denied"
+      name="Communicate Decision to Applicant">
+      <incoming>Flow_14227wp</incoming>
+      <messageEventDefinition id="MessageEventDefinition_0rmc3gn" />
+    </intermediateThrowEvent>
+    <endEvent id="Event_178qrwi" maturity:maturity_level="2"
+      maturity:user_description="The permit is issued with all the necessary signatures and uploaded in pdf on the website."
+      name="Issuance of Permit">
+      <incoming>Flow_1dz8rfk</incoming>
+    </endEvent>
+    <intermediateThrowEvent id="Event_1emiyrx" maturity:maturity_level="1"
+      maturity:user_description="" name="Planning Commission Meeting">
+      <incoming>Flow_016o0z7</incoming>
+      <incoming>Flow_1x6bb34</incoming>
+      <outgoing>Flow_10b4mrq</outgoing>
+    </intermediateThrowEvent>
+    <intermediateThrowEvent id="Event_0tfw29s" maturity:maturity_level="1"
+      maturity:user_description="The technitian issues their final report on the project and signs the document with their decision."
+      name="Issue Approval or Denial">
+      <incoming>Flow_1wyj9y0</incoming>
+      <outgoing>Flow_14227wp</outgoing>
+    </intermediateThrowEvent>
+    <intermediateThrowEvent id="Event_1d26swa" maturity:maturity_level="2"
+      maturity:user_description="" name="Return Application for Revision">
+      <incoming>Flow_071x1ge</incoming>
+      <messageEventDefinition id="MessageEventDefinition_13uelii" />
+    </intermediateThrowEvent>
+    <intermediateThrowEvent id="Event_1sw0sd1" name="Pre-application consultations">
+      <messageEventDefinition id="MessageEventDefinition_0biwobk" />
+    </intermediateThrowEvent>
+  </process>
+  <process id="Process_0ynjb0m">
+    <task id="Activity_1t9un0r" maturity:maturity_level="2"
+      maturity:user_description="The citizens can file their complains about the project on the website, filing an online form"
+      name="Collection of Public Feedback" />
+  </process>
+  <process id="Process_1si7yt5">
+    <sequenceFlow id="Flow_0hedlp1" sourceRef="Activity_084qsme" targetRef="Gateway_13fmwj3" />
+    <sequenceFlow id="Flow_031i8mk" sourceRef="Gateway_13fmwj3" targetRef="Event_0erh0ds" />
+    <intermediateThrowEvent id="Event_0erh0ds" maturity:maturity_level="1"
+      maturity:user_description="The external agency issues a report with their recommendation, this document is in pdf and has a written signature from the responsible for the project"
+      name="Issue Conditional Approvals">
+      <incoming>Flow_031i8mk</incoming>
+    </intermediateThrowEvent>
+    <exclusiveGateway id="Gateway_13fmwj3" name="Decision on External Agency Approvals">
+      <incoming>Flow_0hedlp1</incoming>
+      <outgoing>Flow_031i8mk</outgoing>
+    </exclusiveGateway>
+    <task id="Activity_084qsme" maturity:maturity_level="2"
+      maturity:user_description="There is a part of the portal external agencies can access and dowload the documents referent to their part of analysis on the project"
+      name="External Agencies Feedback">
+      <outgoing>Flow_0hedlp1</outgoing>
+    </task>
+  </process>
+  <bpmndi:BPMNDiagram id="BpmnDiagram_1">
+    <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Collaboration_0ns2ztv">
+      <bpmndi:BPMNShape id="Participant_10416fu_di" bpmnElement="Participant_10416fu"
+        isHorizontal="true">
+        <omgdc:Bounds x="160" y="270" width="6550" height="342" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1qnca7r_di" bpmnElement="Event_0c9qgbh" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="3372" y="544" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3275" y="542" width="89" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01vke2b_di" bpmnElement="Activity_01vke2b"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3540" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1l2wzfp_di" bpmnElement="Activity_1l2wzfp"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3880" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kotjl9_di" bpmnElement="Activity_0kotjl9"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4190" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1pkqjwk_di" bpmnElement="Activity_1pkqjwk"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4340" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lkh4hv_di" bpmnElement="Activity_1lkh4hv"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4050" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nmiprp_di" bpmnElement="Activity_1nmiprp"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4610" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0if8j0b_di" bpmnElement="Activity_0if8j0b"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4760" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1sc1hfv_di" bpmnElement="Activity_1sc1hfv"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="1900" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_009csz7_di" bpmnElement="Activity_009csz7"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="2140" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_083sk93_di" bpmnElement="Activity_083sk93"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="2485" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0vjppnk_di" bpmnElement="Activity_0vjppnk"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="2790" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_08j44sl_di" bpmnElement="Activity_08j44sl"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3200" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_004oz6e_di" bpmnElement="Activity_004oz6e"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="2305" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1gziu87_di" bpmnElement="Activity_1gziu87"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3050" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1ndlhnu_di" bpmnElement="Gateway_1ndlhnu" isMarkerVisible="true"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4515" y="437" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4511" y="494" width="58" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vby0a8_di" bpmnElement="Event_1vby0a8" bioc:stroke="#000000"
+        bioc:fill="#b3d9ff" color:background-color="#b3d9ff" color:border-color="#000000">
+        <omgdc:Bounds x="4912" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4902" y="487" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1uvvmdj_di" bpmnElement="Event_1uvvmdj" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="5007" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4991" y="392" width="68" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0bffslq_di" bpmnElement="Gateway_0bffslq" isMarkerVisible="true">
+        <omgdc:Bounds x="2665" y="437" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2647" y="494" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0s2cw8t_di" bpmnElement="Gateway_0s2cw8t" isMarkerVisible="true">
+        <omgdc:Bounds x="3365" y="437" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3367" y="387" width="45" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0u8wazg_di" bpmnElement="Event_0u8wazg" bioc:stroke="#000000"
+        bioc:fill="#4d9eff" color:background-color="#4d9eff" color:border-color="#000000">
+        <omgdc:Bounds x="2052" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2029" y="487" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_03zn3tq_di" bpmnElement="Event_03zn3tq" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="2952" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2926" y="407" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0u9cs9i_di" bpmnElement="Event_1sw0sd1">
+        <omgdc:Bounds x="1242" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1223" y="487" width="74" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1iskt2i_di" bpmnElement="Event_14zo0wl" bioc:stroke="#000000"
+        bioc:fill="#4d9eff" color:background-color="#4d9eff" color:border-color="#000000">
+        <omgdc:Bounds x="1807" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1731.5" y="448" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_096o8k1_di" bpmnElement="Event_0l2c0er" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="4522" y="302" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4444" y="300" width="68" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0o5889u_di" bpmnElement="Gateway_0o5889u" isMarkerVisible="true">
+        <omgdc:Bounds x="5345" y="437" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5329" y="494" width="82" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0igloxo_di" bpmnElement="Activity_0igloxo"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="5450" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0y1jv3p_di" bpmnElement="Activity_0y1jv3p"
+        bioc:stroke="#000000" bioc:fill="#b3d9ff" color:background-color="#b3d9ff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="5160" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0i6dk76_di" bpmnElement="Event_144gat5">
+        <omgdc:Bounds x="5722" y="354" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lz0rd1_di" bpmnElement="Activity_1lz0rd1"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="6460" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0llzwz8_di" bpmnElement="Activity_0llzwz8"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="6290" y="422" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1jnuhso_di" bpmnElement="Gateway_1jnuhso" isMarkerVisible="true">
+        <omgdc:Bounds x="5715" y="437" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5695" y="494" width="90" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1gcnr6a_di" bpmnElement="Event_1gcnr6a" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="5962" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5946" y="487" width="68" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0cjc34u_di" bpmnElement="Event_178qrwi" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="6632" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="6621" y="487" width="58" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1emiyrx_di" bpmnElement="Event_1emiyrx" bioc:stroke="#000000"
+        bioc:fill="#b3d9ff" color:background-color="#b3d9ff" color:border-color="#000000">
+        <omgdc:Bounds x="5602" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5590" y="487" width="61" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0tfw29s_di" bpmnElement="Event_0tfw29s" bioc:stroke="#000000"
+        bioc:fill="#b3d9ff" color:background-color="#b3d9ff" color:border-color="#000000">
+        <omgdc:Bounds x="5842" y="444" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5816" y="406.5" width="87" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1d26swa_di" bpmnElement="Event_1d26swa" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="2672" y="302" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2572" y="306" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_071x1ge_di" bpmnElement="Flow_071x1ge">
+        <omgdi:waypoint x="2690" y="437" />
+        <omgdi:waypoint x="2690" y="338" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10hsyb5_di" bpmnElement="Flow_10hsyb5">
+        <omgdi:waypoint x="3390" y="487" />
+        <omgdi:waypoint x="3390" y="544" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0d7esa6_di" bpmnElement="Flow_0d7esa6">
+        <omgdi:waypoint x="4540" y="437" />
+        <omgdi:waypoint x="4540" y="338" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ji3duc_di" bpmnElement="Flow_0ji3duc">
+        <omgdi:waypoint x="5740" y="437" />
+        <omgdi:waypoint x="5740" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04o1sbz_di" bpmnElement="Flow_04o1sbz">
+        <omgdi:waypoint x="3980" y="462" />
+        <omgdi:waypoint x="4050" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14vx1fs_di" bpmnElement="Flow_14vx1fs">
+        <omgdi:waypoint x="6390" y="462" />
+        <omgdi:waypoint x="6460" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dz8rfk_di" bpmnElement="Flow_1dz8rfk">
+        <omgdi:waypoint x="6560" y="462" />
+        <omgdi:waypoint x="6632" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_042nxmp_di" bpmnElement="Flow_042nxmp">
+        <omgdi:waypoint x="4150" y="462" />
+        <omgdi:waypoint x="4190" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1z0bw5o_di" bpmnElement="Flow_1z0bw5o">
+        <omgdi:waypoint x="4290" y="462" />
+        <omgdi:waypoint x="4340" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kgzuta_di" bpmnElement="Flow_1kgzuta">
+        <omgdi:waypoint x="4440" y="462" />
+        <omgdi:waypoint x="4515" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1v08q7z_di" bpmnElement="Flow_1v08q7z">
+        <omgdi:waypoint x="5260" y="462" />
+        <omgdi:waypoint x="5345" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pd6t3s_di" bpmnElement="Flow_1pd6t3s">
+        <omgdi:waypoint x="5395" y="462" />
+        <omgdi:waypoint x="5450" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_016o0z7_di" bpmnElement="Flow_016o0z7">
+        <omgdi:waypoint x="5550" y="462" />
+        <omgdi:waypoint x="5602" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bn05j4_di" bpmnElement="Flow_1bn05j4">
+        <omgdi:waypoint x="4565" y="462" />
+        <omgdi:waypoint x="4610" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0diqbhx_di" bpmnElement="Flow_0diqbhx">
+        <omgdi:waypoint x="4710" y="462" />
+        <omgdi:waypoint x="4760" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0aeyhdk_di" bpmnElement="Flow_0aeyhdk">
+        <omgdi:waypoint x="4860" y="462" />
+        <omgdi:waypoint x="4912" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0d2a2wx_di" bpmnElement="Flow_0d2a2wx">
+        <omgdi:waypoint x="1843" y="462" />
+        <omgdi:waypoint x="1900" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0j9qbfl_di" bpmnElement="Flow_0j9qbfl">
+        <omgdi:waypoint x="2000" y="462" />
+        <omgdi:waypoint x="2052" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tn6xzc_di" bpmnElement="Flow_0tn6xzc">
+        <omgdi:waypoint x="2088" y="462" />
+        <omgdi:waypoint x="2140" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uxini8_di" bpmnElement="Flow_0uxini8">
+        <omgdi:waypoint x="2240" y="462" />
+        <omgdi:waypoint x="2305" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13y0ocx_di" bpmnElement="Flow_13y0ocx">
+        <omgdi:waypoint x="2405" y="462" />
+        <omgdi:waypoint x="2485" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06a95cy_di" bpmnElement="Flow_06a95cy">
+        <omgdi:waypoint x="2585" y="462" />
+        <omgdi:waypoint x="2665" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13ia2ro_di" bpmnElement="Flow_13ia2ro">
+        <omgdi:waypoint x="2890" y="462" />
+        <omgdi:waypoint x="2952" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02no3pp_di" bpmnElement="Flow_02no3pp">
+        <omgdi:waypoint x="3150" y="462" />
+        <omgdi:waypoint x="3200" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02hz8h6_di" bpmnElement="Flow_02hz8h6">
+        <omgdi:waypoint x="3300" y="462" />
+        <omgdi:waypoint x="3365" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ckcq7p_di" bpmnElement="Flow_0ckcq7p">
+        <omgdi:waypoint x="2988" y="462" />
+        <omgdi:waypoint x="3050" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x6bb34_di" bpmnElement="Flow_1x6bb34">
+        <omgdi:waypoint x="5370" y="437" />
+        <omgdi:waypoint x="5370" y="362" />
+        <omgdi:waypoint x="5620" y="362" />
+        <omgdi:waypoint x="5620" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10b4mrq_di" bpmnElement="Flow_10b4mrq">
+        <omgdi:waypoint x="5638" y="462" />
+        <omgdi:waypoint x="5715" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wyj9y0_di" bpmnElement="Flow_1wyj9y0">
+        <omgdi:waypoint x="5765" y="462" />
+        <omgdi:waypoint x="5842" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14227wp_di" bpmnElement="Flow_14227wp">
+        <omgdi:waypoint x="5878" y="462" />
+        <omgdi:waypoint x="5962" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0e47ezk_di" bpmnElement="Flow_0e47ezk">
+        <omgdi:waypoint x="4948" y="462" />
+        <omgdi:waypoint x="5007" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1x75f9d_di" bpmnElement="Participant_1x75f9d"
+        isHorizontal="true">
+        <omgdc:Bounds x="160" y="640" width="6550" height="240" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1tznocu" bpmnElement="Activity_084qsme" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="3350" y="736" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_13fmwj3_di" bpmnElement="Gateway_13fmwj3" isMarkerVisible="true">
+        <omgdc:Bounds x="3575" y="751" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3560" y="816" width="80" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0erh0ds_di" bpmnElement="Event_0erh0ds" bioc:stroke="#000000"
+        bioc:fill="#b3d9ff" color:background-color="#b3d9ff" color:border-color="#000000">
+        <omgdc:Bounds x="3582" y="668" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3487" y="673" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0hedlp1_di" bpmnElement="Flow_0hedlp1">
+        <omgdi:waypoint x="3450" y="776" />
+        <omgdi:waypoint x="3575" y="776" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_031i8mk_di" bpmnElement="Flow_031i8mk">
+        <omgdi:waypoint x="3600" y="751" />
+        <omgdi:waypoint x="3600" y="704" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1d7bae3_di" bpmnElement="Participant_1d7bae3"
+        isHorizontal="true">
+        <omgdc:Bounds x="160" y="-70" width="6550" height="300" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03nqiax_di" bpmnElement="Activity_03nqiax"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="940" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02b1xjc_di" bpmnElement="Activity_02b1xjc"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="1090" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_12p1n4y_di" bpmnElement="Activity_12p1n4y"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="1340" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xl4x8q_di" bpmnElement="Activity_0xl4x8q"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="1495" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sjmztu_di" bpmnElement="Activity_0sjmztu"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="475" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xzdkqq_di" bpmnElement="Activity_0xzdkqq"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="635" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02rtfjo_di" bpmnElement="Activity_02rtfjo"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="795" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0gmck6m_di" bpmnElement="Activity_0gmck6m"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="1775" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11watu1_di" bpmnElement="Activity_11watu1"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="2795" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_07ovf00_di" bpmnElement="Activity_07ovf00"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3545" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1eoi8zf_di" bpmnElement="Activity_1eoi8zf"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="3715" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02uj2kc_di" bpmnElement="Activity_02uj2kc"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4325" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ip5bbs_di" bpmnElement="Activity_1ip5bbs"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4495" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_08pz4u4_di" bpmnElement="Event_0eu72vf" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="1667" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1658" y="145" width="53" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0pp444q_di" bpmnElement="Event_0dvnw20" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="1242" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1223" y="62" width="74" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0f62ar1_di" bpmnElement="Event_0f62ar1" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="2672" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2572" y="103" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1c0nxo6_di" bpmnElement="Event_1c0nxo6" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="3917" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3824" y="103" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fmesdu_di" bpmnElement="Activity_0fmesdu"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="6105" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1idljpm_di" bpmnElement="Activity_1idljpm"
+        bioc:stroke="#000000" bioc:fill="#4d9eff" color:background-color="#4d9eff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="6295" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1dlal3d_di" bpmnElement="Event_1dlal3d" bioc:stroke="#000000"
+        bioc:fill="#80bfff" color:background-color="#80bfff" color:border-color="#000000">
+        <omgdc:Bounds x="5967" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="5951" y="62" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1gqkizg_di" bpmnElement="Activity_1gqkizg"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="320" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1rifxrt_di" bpmnElement="Event_1rifxrt">
+        <omgdc:Bounds x="232" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1ilum4y_di" bpmnElement="Flow_1ilum4y">
+        <omgdi:waypoint x="268" y="117" />
+        <omgdi:waypoint x="320" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_018iz5p_di" bpmnElement="Flow_018iz5p">
+        <omgdi:waypoint x="420" y="117" />
+        <omgdi:waypoint x="475" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kw9s8p_di" bpmnElement="Flow_0kw9s8p">
+        <omgdi:waypoint x="895" y="117" />
+        <omgdi:waypoint x="940" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02n6rn7_di" bpmnElement="Flow_02n6rn7">
+        <omgdi:waypoint x="1040" y="117" />
+        <omgdi:waypoint x="1090" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0h2xpv1_di" bpmnElement="Flow_0h2xpv1">
+        <omgdi:waypoint x="1190" y="117" />
+        <omgdi:waypoint x="1242" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1n6ogyp_di" bpmnElement="Flow_1n6ogyp">
+        <omgdi:waypoint x="1278" y="117" />
+        <omgdi:waypoint x="1340" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wwlbpy_di" bpmnElement="Flow_1wwlbpy">
+        <omgdi:waypoint x="1440" y="117" />
+        <omgdi:waypoint x="1495" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0spkil1_di" bpmnElement="Flow_0spkil1">
+        <omgdi:waypoint x="1595" y="117" />
+        <omgdi:waypoint x="1667" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12ygi9x_di" bpmnElement="Flow_12ygi9x">
+        <omgdi:waypoint x="6003" y="117" />
+        <omgdi:waypoint x="6105" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19r4qzp_di" bpmnElement="Flow_19r4qzp">
+        <omgdi:waypoint x="6205" y="117" />
+        <omgdi:waypoint x="6295" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16vimjb_di" bpmnElement="Flow_16vimjb">
+        <omgdi:waypoint x="575" y="117" />
+        <omgdi:waypoint x="635" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xdrjs4_di" bpmnElement="Flow_1xdrjs4">
+        <omgdi:waypoint x="735" y="117" />
+        <omgdi:waypoint x="795" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f2izjc_di" bpmnElement="Flow_0f2izjc">
+        <omgdi:waypoint x="1703" y="117" />
+        <omgdi:waypoint x="1775" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_168jndl_di" bpmnElement="Flow_168jndl">
+        <omgdi:waypoint x="2708" y="117" />
+        <omgdi:waypoint x="2795" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1un6qg7_di" bpmnElement="Flow_1un6qg7">
+        <omgdi:waypoint x="3645" y="117" />
+        <omgdi:waypoint x="3715" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1e2uabw_di" bpmnElement="Flow_1e2uabw">
+        <omgdi:waypoint x="4495" y="117" />
+        <omgdi:waypoint x="4425" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1s3mz9i_di" bpmnElement="Flow_1s3mz9i">
+        <omgdi:waypoint x="4325" y="117" />
+        <omgdi:waypoint x="3953" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1n47d9v_di" bpmnElement="Participant_1n47d9v"
+        isHorizontal="true">
+        <omgdc:Bounds x="160" y="915" width="6550" height="230" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1t9un0r_di" bpmnElement="Activity_1t9un0r"
+        bioc:stroke="#000000" bioc:fill="#80bfff" color:background-color="#80bfff"
+        color:border-color="#000000">
+        <omgdc:Bounds x="4970" y="980" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1nv5mws_di" bpmnElement="Flow_1nv5mws">
+        <omgdi:waypoint x="2690" y="302" />
+        <omgdi:waypoint x="2690" y="135" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04xth0i_di" bpmnElement="Flow_04xth0i">
+        <omgdi:waypoint x="3590" y="422" />
+        <omgdi:waypoint x="3590" y="157" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06f5spv_di" bpmnElement="Flow_06f5spv">
+        <omgdi:waypoint x="3600" y="668" />
+        <omgdi:waypoint x="3600" y="502" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u2td7x_di" bpmnElement="Flow_1u2td7x">
+        <omgdi:waypoint x="3765" y="157" />
+        <omgdi:waypoint x="3765" y="462" />
+        <omgdi:waypoint x="3880" y="462" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nufeln_di" bpmnElement="Flow_1nufeln">
+        <omgdi:waypoint x="4540" y="302" />
+        <omgdi:waypoint x="4540" y="157" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1y7ozjo_di" bpmnElement="Flow_1y7ozjo">
+        <omgdi:waypoint x="5025" y="480" />
+        <omgdi:waypoint x="5025" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0d7k8py_di" bpmnElement="Flow_0d7k8py">
+        <omgdi:waypoint x="6345" y="157" />
+        <omgdi:waypoint x="6345" y="422" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zgiqlp_di" bpmnElement="Flow_0zgiqlp">
+        <omgdi:waypoint x="1260" y="444" />
+        <omgdi:waypoint x="1260" y="135" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xkakd5_di" bpmnElement="Flow_1xkakd5">
+        <omgdi:waypoint x="1825" y="157" />
+        <omgdi:waypoint x="1825" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04ax9tz_di" bpmnElement="Flow_04ax9tz">
+        <omgdi:waypoint x="2845" y="157" />
+        <omgdi:waypoint x="2845" y="422" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0b3ng1p_di" bpmnElement="Flow_0b3ng1p">
+        <omgdi:waypoint x="3390" y="580" />
+        <omgdi:waypoint x="3390" y="736" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qg9i8o_di" bpmnElement="Flow_1qg9i8o">
+        <omgdi:waypoint x="3935" y="135" />
+        <omgdi:waypoint x="3935" y="422" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02axgrq_di" bpmnElement="Flow_02axgrq">
+        <omgdi:waypoint x="5985" y="445" />
+        <omgdi:waypoint x="5985" y="135" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03pd5fm_di" bpmnElement="Flow_03pd5fm">
+        <omgdi:waypoint x="5070" y="1020" />
+        <omgdi:waypoint x="5210" y="1020" />
+        <omgdi:waypoint x="5210" y="502" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
